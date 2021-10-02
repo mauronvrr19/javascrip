@@ -1,8 +1,6 @@
 * {
-    
-    margin: 0%;
 font-family: sans-serif;
-padding: 2px;
+padding: 0px;
 }
 
 body {
@@ -28,10 +26,11 @@ p{text-align: center;}
     object-fit: cover;
 
     img {
-        width: 200%;
+        width: 160%;
         height: 100%;
         border: 2px solid black;
         padding: 0px;
+        margin: 4px;
 
     }
 }
