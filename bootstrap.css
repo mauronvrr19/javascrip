@@ -24,6 +24,13 @@ p {
   margin-bottom: 20px;
 }
 
+.divisas {
+  margin-top: 5px;
+  padding: 5px;
+  text-align: center;
+  color: red;
+}
+
 .inflacion {
   -o-object-fit: cover;
      object-fit: cover;
@@ -50,6 +57,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: black;
+  font-weight: bolder;
 }
 
 .caja-padre .cajas {
@@ -102,7 +111,21 @@ p {
   background-size: cover;
 }
 
+.caja-padre .cajas-6 {
+  border: 2px solid black;
+  text-align: center;
+  margin: 15px;
+  width: 24%;
+  padding: 3px;
+  background-image: url(https://larepublica.pe/resizer/ljfbahHp9nsc61pO21l7wUius6Q=/480x282/top/smart/arc-anglerfish-arc2-prod-gruporepublica.s3.amazonaws.com/public/OOGUX6H7GBBN7OUJ2BAXOTGY2A.jpg);
+  background-size: cover;
+}
+
 h2 {
+  text-align: center;
+}
+
+h3 {
   text-align: center;
 }
 
@@ -114,6 +137,36 @@ button {
 footer {
   background: #0000007e;
   border: 1px solid black;
+}
+
+.total {
+  color: black;
+  font-size: 30px;
+}
+
+.total2 {
+  color: black;
+  font-size: 30px;
+}
+
+.total3 {
+  color: black;
+  font-size: 30px;
+}
+
+.total4 {
+  color: black;
+  font-size: 30px;
+}
+
+.total5 {
+  color: black;
+  font-size: 30px;
+}
+
+.total6 {
+  color: black;
+  font-size: 30px;
 }
 
 @media screen and (min-width: 100px) and (max-width: 959px) {
