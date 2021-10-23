@@ -1,13 +1,39 @@
-// cotizacion de divisas
-const divisas = document.querySelector('.divisas');
-const ul = document.createElement("ul")
-ul.innerHTML = "cotizacion del dia"
-divisas.appendChild(ul)
+ // cotizacion de divisas
 
-const li = document.createElement("li")
-li.innerHTML = "euro: €1 = $215 / dolar: US$1 = $185 / real: R1 = $33";
-divisas.appendChild(li);
+$('.divisas')
+.append(`
+<p>cotizacion del dia</p>
+<p>euro: €1 = $215 / dolar: US$1 = $185 / real: R1 = $33</p>
+`);
 
+
+window.addEventListener('load', function() {
+    console.log( 'Todos los elementos de la ventana están cargados' );
+});
+ 
+// // modo oscuro
+//  $('.enlace').on('click', function () {
+//     if (){
+//     $("#by").css("background", "black"); 
+//     }
+// else {
+//     $("#by").css("background", "white"); }
+// // }
+// );
+
+// modo oscuro
+const by = $('#by')
+$('.enlace').on('click', function () {
+    if ( by.hasClass('darkMode') ){
+           by.removeClass('darkMode')
+           console.log("modo oscuro desactivado");
+    }  else {
+           by.addClass('darkMode');
+           console.log("modo oscuro activado");
+        }
+
+    }
+);
 
 // calculadora de reales
 const button = document.querySelector('.button')
@@ -46,131 +72,6 @@ button3.addEventListener("click", () => {
     total3.innerHTML = "total: $" + euro(x) + ` - €${monto3.value}`;
 })
 
-// array
-const inflacion = [
-
-    {
-        año: 1992,
-        i: 126
-    },
-    {
-        año: 1993,
-        i: 107
-    },
-    {
-        año: 1994,
-        i: 99.91
-    },
-    {
-        año: 1995,
-        i: 96.21
-    },
-    {
-        año: 1996,
-        i: 94.68
-    },
-    {
-        año: 1997,
-        i: 93.63
-    },
-    {
-        año: 1998,
-        i: 93.3218
-    },
-    {
-        año: 1999,
-        i: 92.6988
-    },
-    {
-        año: 2000,
-        i: 94.4263
-    },
-    {
-        año: 2001,
-        i: 95.129
-    },
-    {
-        año: 2002,
-        i: 97.64
-    },
-    {
-        año: 2003,
-        i: 69.27
-    },
-    {
-        año: 2004,
-        i: 66.83
-    },
-    {
-        año: 2005,
-        i: 62.99
-    },
-    {
-        año: 2006,
-        i: 56.08
-    },
-    {
-        año: 2007,
-        i: 51.05
-    },
-    {
-        año: 2008,
-        i: 41.83
-    },
-    {
-        año: 2009,
-        i: 33.9
-    },
-    {
-        año: 2010,
-        i: 29.08
-    },
-    {
-        año: 2011,
-        i: 23.09
-    },
-    {
-        año: 2012,
-        i: 18.57
-    },
-    {
-        año: 2013,
-        i: 14.78
-    },
-    {
-        año: 2014,
-        i: 11.89
-    },
-    {
-        año: 2015,
-        i: 8.64
-    },
-    {
-        año: 2016,
-        i: 6.75
-    },
-    {
-        año: 2017,
-        i: 5.11
-    },
-    {
-        año: 2018,
-        i: 4.09
-    },
-    {
-        año: 2019,
-        i: 2.77
-    },
-    {
-        año: 2020,
-        i: 1.8
-    },
-
-]
-
-localStorage.setItem('datos', JSON.stringify(inflacion));
-const guardado = localStorage.getItem('datos')
-console.log('objetoObtenido: ', JSON.parse(guardado));
 
 // calculadora inflacionaria
 const button4 = document.querySelector('.button4')
@@ -185,7 +86,6 @@ button4.addEventListener("click", () => {
     else {
         total4.innerHTML = "ingrege otro año"
     }
-    console.log(consulta)
 })
 
 // calculadora de devaluacion 
@@ -201,138 +101,7 @@ button5.addEventListener("click", () => {
     } else {
         total5.innerHTML = "ingrese otro año"
     }
-    console.log(consulta)
-
 })
-
-//    array
-const dolar = [
-
-    {
-        año: 1992,
-        i: 0.9916
-    },
-    {
-        año: 1993,
-        i: 0.9984
-    },
-    {
-        año: 1994,
-        i: 1.0014
-    },
-    {
-        año: 1995,
-        i: 1.0016
-    },
-    {
-        año: 1996,
-        i: 1.0005
-    },
-    {
-        año: 1997,
-        i: 1.0014
-    },
-    {
-        año: 1998,
-        i: 1.0010
-    },
-    {
-        año: 1999,
-        i: 1.0014
-    },
-    {
-        año: 2000,
-        i: 1.0014
-    },
-    {
-        año: 2001,
-        i: 1.1499
-    },
-    {
-        año: 2002,
-        i: 3.4050
-    },
-    {
-        año: 2003,
-        i: 2.9400
-    },
-    {
-        año: 2004,
-        i: 2.9750
-    },
-    {
-        año: 2005,
-        i: 3.0320
-    },
-    {
-        año: 2006,
-        i: 3.0620
-    },
-    {
-        año: 2007,
-        i: 3.1490
-    },
-    {
-        año: 2008,
-        i: 3.4530
-    },
-    {
-        año: 2009,
-        i: 3.8000
-    },
-    {
-        año: 2010,
-        i: 3.9760
-    },
-    {
-        año: 2011,
-        i: 4.73
-    },
-    {
-        año: 2012,
-        i: 6.78
-    },
-    {
-        año: 2013,
-        i: 9.95
-    },
-    {
-        año: 2014,
-        i: 13.70
-    },
-    {
-        año: 2015,
-        i: 14.17
-    },
-    {
-        año: 2016,
-        i: 16.47
-    },
-    {
-        año: 2017,
-        i: 18.88
-    },
-    {
-        año: 2018,
-        i: 38.50
-    },
-    {
-        año: 2019,
-        i: 38.50
-    },
-    {
-        año: 2020,
-        i: 73.50
-    },
-    {
-        año: 2021,
-        i: 176.50
-    },
-]
-
-localStorage.setItem('datos2', JSON.stringify(dolar));
-const guardado2 = localStorage.getItem('datos2')
-console.log('objetoObtenido: ', JSON.parse(guardado2));
 
 
 // calculadora de pesos-dolar 
@@ -349,6 +118,4 @@ button6.addEventListener("click", () => {
     else {
         total6.innerHTML = "ingrese otro año"
     }
-
-    console.log(consulta)
 })

@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+.darkMode {
+  background: black;
+}
+
 p {
   text-align: center;
 }
@@ -167,6 +171,18 @@ footer {
 .total6 {
   color: black;
   font-size: 30px;
+}
+
+.modo {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.modo .enlace {
+  text-align: center;
+  background: black;
+  color: white;
 }
 
 @media screen and (min-width: 100px) and (max-width: 959px) {
