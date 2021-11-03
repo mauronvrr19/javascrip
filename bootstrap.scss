@@ -10,10 +10,21 @@ body {
     background: black;
   }
 
-p {
+.divisas {
     text-align: center;
 }
 
+#btn1{
+    margin: 5px;
+    padding: 2px;
+    width: 75px;
+}
+#btn2{
+    margin: 5px;
+    padding: 2px;
+    width: 75px;
+
+}
 
 .container {
     text-align: center;
@@ -31,7 +42,6 @@ p {
 .divisas {
     margin-top: 5px;
     padding: 5px;
-    text-align: center;
     color: red;
 }
 

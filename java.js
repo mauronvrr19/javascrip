@@ -1,25 +1,54 @@
+//  horario
+const dia = new Date()
+
  // cotizacion de divisas
 
 $('.divisas')
 .append(`
 <p>cotizacion del dia</p>
 <p>euro: €1 = $215 / dolar: US$1 = $185 / real: R1 = $33</p>
+<p>${dia}</p>
 `);
 
 
 window.addEventListener('load', function() {
     console.log( 'Todos los elementos de la ventana están cargados' );
 });
- 
-// // modo oscuro
-//  $('.enlace').on('click', function () {
-//     if (){
-//     $("#by").css("background", "black"); 
-//     }
-// else {
-//     $("#by").css("background", "white"); }
-// // }
-// );
+
+
+
+
+const URL = 'inflacion.json'
+$("body").prepend('<button id="btn2">inflacion</button>');
+$("#btn2").click(() => { 
+    $.getJSON(URL, function (respuesta, estado) {
+          if(estado === "success"){
+            let misDatos = respuesta;
+            for (const dato of misDatos) {
+              $("body").prepend(`<div>
+                                   <h2> año: ${dato.año}</h2>
+                                   <h2> inflacion: ${dato.i}</h2>
+                                  </div>`);
+            }  
+          }
+    });
+});
+
+const URLGET = 'dolar.json'
+$("body").prepend('<button id="btn1">dolar</button>');
+$("#btn1").click(() => { 
+    $.getJSON(URLGET, function (respuesta, estado) {
+          if(estado === "success"){
+            let misDatos = respuesta;
+            for (const dato of misDatos) {
+              $("body").prepend(`<div>
+                                   <h1> año: ${dato.año}</h1>
+                                   <h1> valor: $${dato.i}</h1>
+                                  </div>`);
+            }  
+          }
+    });
+});
 
 // modo oscuro
 const by = $('#by')
