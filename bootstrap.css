@@ -3,6 +3,10 @@
   padding: 0px;
 }
 
+.visible {
+  display: none;
+}
+
 body {
   overflow-x: hidden;
 }
